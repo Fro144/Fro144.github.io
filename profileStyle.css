@@ -1,0 +1,112 @@
+body{
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    background-image: url("https://i.imgur.com/eq1ZWMx.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+}
+h1{
+    color: #ff0000;
+}
+
+.box-1
+{
+    background-color: whitesmoke;
+    border-top: 5px red solid;
+    border-left: 5px red solid;
+    border-right: 5px red solid;
+    border-bottom: 5px red solid;
+    border-style: ridge;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.box-2
+{
+    background-color: wheat;
+    border: 5px rebeccapurple solid;
+    padding: 20px;
+    margin: 10px;
+}
+.box-1 h4
+{
+    font-family: Tahoma;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.1mm;
+}
+.container
+{
+    width: 80%;
+    margin: auto;
+}
+
+
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+a:hover
+{
+    color: red;
+}
+
+a:active
+{
+    color: seagreen;
+}
+
+nav#MainNav
+{
+    background-color: lightcyan;
+}
+
+.nav-item
+{
+    list-style-type: square;
+    display: inline;
+    width: auto;
+}
+
+#myForm
+{
+    background-color: gray;
+    color: blanchedalmond;
+    padding: 50px;
+    margin: 10px;
+}
+
+#myForm input[type = "text"]
+{
+   padding: 8px;
+   border: none;
+   
+
+}
+.button
+{
+    padding: 8px;
+    border: none;
+    background-color: blue;
+   color: white;
+}
+
+table, th, td
+{
+    border: black solid 1px;
+}
+
+
