@@ -1,74 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        <head>
-            <meta charset="utf-8"/>
-            <title>My Profile</title>
-            <meta name ="author" content="Frazer Green"/>
-            <meta name ="description" content="This is a wonderful webpage"/>
-            <link href="profileStyle.css" rel="stylesheet"/>
-            
-        </head>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        <body class="container">
-            <nav id = "MainNav">
-                <ul>
-                    <li><a href="projects.html">Go to projects </a></li>
-                    <li><a href="https://www.warhammer-community.com/" target="_blank">Go to Website </a></li>
-                </ul>
-            </nav>
-        <header>
-            <hr>
-            <img src="Images/ProfilePic.jpg" alt="My picture">
-            <h1>Frazer Green</h1>
-            <hr>
-        </header>
-       
-            <h2>My Profile</h2>
-            <div class=flex-container> 
-        <section class="box-1">
-            <h4>My Skills</h4>
-            <ol>
-                <li><a href="#">Testing</a></li>
-                <li><a href="#">Etc</a></li>
-                <li><a href="#">Etc 2</a></li>
-            </ol>
-        </section>
-        <section class="box-1">
-            <h4>My Hobbies</h4>
-            <ul>
-                <li>Cake</li>
-                <li>Ice Cream</li>
-                <li>Naps</li>
-            </ul>
-        </section>
-        <section class="box-2">
-            <h4>My Goal</h4>
-            <p>To rule the world</p>
-        </section>
-            </div>
+/* Style the header */
+header {
+  background-color: rgba(47, 63, 47, 0.616);
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
 
-            <h3>An ode to Eng86</h3>
-                <p>
-                    today is gonna be the day <br>
-                    that theyre gonna throw it back to you <br>
-                </p>
-                <p><em>- Not Me</em></p>
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
 
-            <h3>Search For News</h3>
-            <form id="myForm" action="https://bbc.co.uk/search" target="_blank">
-                <input type="submit" value="submit" class="button">
-                <label for="mysearch">Search for:</label><br>
-                <input id="mysearch" name="q" type="text" value="Birmingham">
-            </form>
-            <section>
-            <p>here is some text that is <em>emphaised</em> and <strong>bold</strong> </p>
-            </section>
-                <footer>
-                    <small>Copyright &#169; Sparta Global 2021 <cite>Frazer Green</cite></small>
-                </footer>
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-        </body>
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
 
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+/* Style the footer */
+footer {
+  background-color:rgba(47, 63, 47, 0.616);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Frazer Green</h1>
+<h2>My Profile</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+
+<header>
+  <h2>About Me</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">My Skills</a></li>
+      <li><a href="#">My Hobbies</a></li>
+      <li><a href="#">My Goals</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>My Skills</h1>
+    <p>Junior C# SEDT engineer.</p>
+    <p>Gradaute of Birmingham city university</p>
+    <ul>
+        <li><a href="#">SQL</a></li>
+        <li><a href="#">C#</a></li>
+        <li><a href="#">ISTQB certified</a></li>
+      </ul>
+  </article>
+</section>
+
+<footer>
+    <h3>Search For News</h3>
+    <form id="myForm" action="https://bbc.co.uk/search" target="_blank">
+        <label for="mysearch">Search for:</label><br>
+        <input id="mysearch" name="q" type="text" value="Birmingham">
+        <input type="submit" value="submit" class="button">
+    </form>
+</footer>
+
+</body>
 </html>
